@@ -509,3 +509,16 @@ footer {
     padding: 4px 6px;
   }
 }
+
+#projects p a {
+  color: var(--accent); 
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#projects p a:hover,
+#projects p a:focus {
+  color: #a0ffd9;
+  text-shadow: 0 0 8px var(--accent);
+}
