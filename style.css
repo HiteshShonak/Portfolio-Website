@@ -1,4 +1,3 @@
-/* Root variables and global resets */
     :root {
       --bg: #0b0b0d;
       --card: #0f1113;
@@ -20,7 +19,6 @@
       line-height: 1.45;
     }
 
-    /* Layout styles */
     .container {
       max-width: 1100px;
       margin: 48px auto;
@@ -30,21 +28,25 @@
       position: fixed;
       left: 0;
       right: 0;
-      top: 18px;
-      z-index: 40;
+      top: 0; 
+      z-index: 1000;
       display: flex;
       justify-content: center;
+      background: rgba(11, 11, 13, 0.85); 
+      backdrop-filter: blur(10px); 
+      box-shadow: 0 2px 12px rgba(0,0,0,0.6);
     }
+
     .nav {
       width: 100%;
       max-width: 1140px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: transparent;
-      padding: 8px 18px;
+      padding: 12px 20px;
       border-radius: 14px;
     }
+
     .brand {
       font-weight: 800;
       letter-spacing: 0.4px;
@@ -73,7 +75,6 @@
       outline: none;
     }
 
-    /* Hero section styles */
     .hero {
       display: grid;
       grid-template-columns: 1fr 420px;
@@ -106,11 +107,13 @@
       transition: background 0.3s ease, border-color 0.3s ease, color 0.25s ease, box-shadow 0.25s ease;
       user-select: none;
     }
+
     .btn.primary {
       background: linear-gradient(90deg, rgba(110, 231, 183, 0.08), rgba(110, 231, 183, 0.03));
       border: 1px solid rgba(110, 231, 183, 0.12);
       color: var(--accent);
     }
+
     .btn:hover, .btn:focus {
       background: var(--accent);
       color: #0b0b0d;
@@ -119,7 +122,6 @@
       box-shadow: 0 0 10px var(--accent);
     }
 
-    /* Portrait card styles */
     .portrait {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
       border-radius: 14px;
@@ -152,7 +154,7 @@
     .meta .role { color: var(--muted); font-size: 13px; }
     .meta .stats { display: flex; gap: 10px; color: var(--muted); font-size: 13px; }
 
-    /* General section styles */
+    
     section { margin-top: 48px; }
     h2.section-title {
       font-size: 18px;
@@ -162,7 +164,7 @@
       text-transform: uppercase;
     }
 
-    /* About section styles */
+
     .about {
       display: grid;
       grid-template-columns: 1fr 320px;
@@ -211,7 +213,6 @@
       margin-top: 8px;
     }
 
-    /* Projects section styles */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -241,7 +242,6 @@
       line-height: 1.4;
     }
 
-    /* Social issue section styles */
     .issue {
       display: grid;
       grid-template-columns: 1fr 340px;
@@ -262,7 +262,6 @@
       line-height: 1.5;
     }
 
-    /* Contact section styles */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 360px;
@@ -314,7 +313,6 @@
       user-select: none;
     }
 
-    /* Footer styles */
     footer {
       margin: 48px 0;
       color: var(--muted);
@@ -323,14 +321,12 @@
       user-select: none;
     }
 
-    /* Responsive media queries */
     @media (max-width: 900px) {
       .hero, .about, .issue, .contact-grid { grid-template-columns: 1fr; }
       .portrait img { width: 80px; height: 80px; }
       .container { padding: 18px; }
     }
 
-    /* Reveal animation on scroll */
     .reveal {
       opacity: 0;
       transform: translateY(12px);
